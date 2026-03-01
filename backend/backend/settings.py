@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-v59q$q45hiqg1ok0pw%4c%ec%-eol-*%jm2&aqlkj9$h(pv435
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = ["fullstack-auth-app-crp8.onrender.com"]
 
 # Application definition
 
@@ -153,7 +152,11 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://charlesdevauthapp.netlify.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://charlesdevauthapp.netlify.app",
+]
