@@ -27,10 +27,11 @@ function Login() {
 
   return (
     <div className="min-h-0 flex justify-center items-center flex-col">
-      <div className="w-fit sm:w-90 shadow-2xl p-7 rounded-xl ">
+      <div className="w-[90vw] sm:w-fit shadow-2xl p-7 rounded-xl ">
         {loading ? (
-          <div className="text-5xl text-center">
-            <div className="animate-spin h-5 w-5 border-2 border-blue-500 rounded-full"></div>
+          <div className="sm:w-90 w-[90vw] text-5xl flex justify-center items-center h-60 flex-col gap-5">
+            <div className="animate-spin h-15 w-15 border-5 border-violet-800 rounded-full"></div>
+            <p className="text-lg text-violet-800 font-semibold">Loading...</p>
           </div>
         ) : (
           <div className="flex justify-center items-center flex-col gap-4">
@@ -50,10 +51,13 @@ function Login() {
             />
             <button
               onClick={() => navigate("/register")}
-              className="mt-3 text-xs"
+              className="mt-3 text-xs group"
             >
               Don't have an account?
-              <span className="text-blue-500"> Register</span>
+              <span className="text-blue-500 group-hover:underline">
+                {" "}
+                Register
+              </span>
             </button>
             <button
               onClick={handleLogin}
